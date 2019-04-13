@@ -1,0 +1,265 @@
+.banner{
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.banner-body{
+  position: relative;
+}
+.art-banner{
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.main-banners{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+
+}
+.first-banner{
+  position: absolute;
+
+  img{
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  top: 0;
+  left: -300px;
+  display: inline-block;
+  transform: rotateY(180deg);
+  z-index: 7;
+  transform-origin: right;
+  backface-visibility: hidden;
+  transition: .6s;
+  transition-delay: 2s;
+  transform-style: preserve-3d;
+
+}
+.second-banner{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: -600px;
+  transform:  rotateY(180deg);
+  display: inline-block;
+  transition: .6s;
+  transform-origin: right;
+  transition-delay: 1.7s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.three-banner{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  transition: .6s ;
+  transition-delay: 1.4s;
+  position: absolute;
+  top: 250px;
+  left: -600px;
+  backface-visibility: hidden;
+  display: inline-block;
+  transform-origin: top;
+  transform: rotateX(180deg);
+
+}
+.four-banner{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  transition: .6s ;
+  transition-delay: 1.1s;
+  position: absolute;
+  left: -300px;
+  top: 250px;
+  backface-visibility: hidden;
+  display: inline-block;
+  transform:  rotateY(-180deg);
+  transform-origin: left ;
+
+}
+.five-banner{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  transition: .6s ;
+  transition-delay: 0.8s;
+  position: absolute;
+  top: 250px;
+  right: 0;
+  transform: rotateY(-180deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+}
+.six-banner{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  transition: .6s ;
+  transition-delay: .5s;
+  position: absolute;
+  right: 0;
+  top: 500px;
+  transform: rotateX(180deg);
+  transform-origin: top;
+  backface-visibility: hidden;
+}
+.seven-banner{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  transition: .6s ;
+  transition-delay: .2s;
+  position: absolute;
+  left: -300px;
+  top: 500px;
+  transform: rotateY(180deg);
+  transform-origin: right ;
+  backface-visibility: hidden;
+}
+.eight-banner{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  transition: .6s ;
+  position: absolute;
+  display: inline-block;
+  left: -600px;
+  top: 500px;
+  transform: rotateY(180deg);
+  transform-origin: right ;
+  backface-visibility: hidden;
+}
+.link-banner{
+  @media screen and (max-width: 930px) {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 111;
+    height: auto;
+  }
+}
+.flip-ban{
+
+  .link-banner{
+    width: 100%;
+    width: 900px;
+    position: absolute;
+    top: 0;
+    left: -600px;
+    right: 0;
+    bottom: 0;
+    z-index: 111;
+    height: 750px;
+  }
+  .first-banner{
+    transform: rotateY(0);
+    transition: .6s;
+    transition-delay: .2s;
+    z-index: 1;
+  }
+  .second-banner{
+    transform: rotateY(0);
+    transition: .6s ;
+    transition-delay: .6s;
+    z-index: 1;
+  }
+  .three-banner{
+    transform: rotateX(0);
+    transition: .6s ;
+    transition-delay: .8s;
+  }
+  .four-banner{
+    transform: rotateY(0);
+    transition: .6s;
+    z-index: 1;
+    transition-delay: 1s;
+  }
+  .five-banner{
+    transform: rotateY(0);
+    transition: .6s ;
+    transition-delay: 1.2s;
+  }
+  .six-banner{
+    transform: rotateX(0);
+    transition: .6s ;
+    transition-delay: 1.4s;
+  }
+  .seven-banner{
+    transform: rotateY(0);
+    transition: .6s ;
+    transition-delay: 1.6s;
+  }
+  .eight-banner{
+    transform: rotateY(0);
+    transition: .6s ;
+    transition-delay: 1.8s;
+  }
+
+}
+
+
+.btn-close-banner{
+  z-index: 111;
+  display: none;
+  transition: .6s ;
+  cursor: pointer;
+  position: absolute;
+  content: "";
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  &:hover{
+    background: #000;
+  }
+  &:after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 15px;
+    top: calc(50%  - 7px);
+    left: 50%;
+    transform: rotate(-45deg);
+    background: red;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 15px;
+    top: calc(50%  - 7px);
+    left: 50%;
+    transform: rotate(45deg);
+    background: red;
+  }
+
+}
+.visible-close{
+  display: block;
+}
